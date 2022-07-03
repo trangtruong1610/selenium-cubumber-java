@@ -6,10 +6,9 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        features = {"src/main/resources/Features"},
+        features = {"src/main/resources/FeatureWithTags"},
         glue = {"StepDefinitions"},
-        monochrome = true,
-        plugin = {"pretty", "html:target/HtmlReports"}
+        tags = "@smoke or @regression"
 )
-public class TestRunner {
+public class TestRunnerWithTags {
 }
